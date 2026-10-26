@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ayaan Shakil — Software Engineer</title>
+  <meta name="description" content="Ayaan Shakil — backend & AI engineer building REST APIs, microservices and agentic AI systems in Go, Python and Node.js." />
+  <meta name="theme-color" content="#0b0c0e" />
+
+  <!-- Open Graph (update og:url / og:image once hosted) -->
+  <meta property="og:title" content="Ayaan Shakil — Software Engineer" />
+  <meta property="og:description" content="Backend & AI engineer. Go, Python, Node.js, LangGraph, RAG, MCP." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0e'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='38' fill='%23c8f560'%3Eas%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    document.documentElement.classList.add('js');
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ───────────── Nav ───────────── -->
+  <header class="nav" id="nav">
+    <div class="nav__inner wrap">
+      <a href="#top" class="nav__logo" aria-label="Home">ayaan<span>.</span>shakil</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#csnook">CSNook</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle colour theme">
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a class="btn btn--sm" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ───────────── Hero ───────────── -->
+    <section class="hero wrap" id="top">
+      <div class="hero__copy">
+        <p class="eyebrow reveal"><span class="dot"></span> SDE-1 at Trackier · Open to interesting problems</p>
+        <h1 class="hero__title reveal">
+          I build <em>backends</em> that scale<br />
+          and <em>agents</em> that think.
+        </h1>
+        <p class="hero__lede reveal">
+          I'm <strong>Ayaan Shakil</strong>, a software engineer in Bangalore. I design REST APIs and
+          microservices in <strong>Go, Python and Node.js</strong>, and build agentic AI systems —
+          RAG pipelines and AI agents with <strong>LangGraph, LangChain and MCP</strong>.
+        </p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#work">See my work
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn" href="mailto:ayanshakil17@gmail.com">Get in touch</a>
+        </div>
+        <ul class="hero__social reveal" aria-label="Profiles">
+          <li><a href="https://github.com/ayanshakil" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/ayaan-shakil-84b83022b/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://codeforces.com/profile/mosetupid" target="_blank" rel="noopener">Codeforces ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="hero__card reveal" aria-label="About me, written as Go code">
+        <div class="code">
+          <div class="code__bar">
+            <span></span><span></span><span></span>
+            <p>ayaan.go</p>
+          </div>
+<pre><code><span class="k">type</span> <span class="t">Engineer</span> <span class="k">struct</span> {
+    Name     <span class="t">string</span>
+    Role     <span class="t">string</span>
+    Stack    []<span class="t">string</span>
+    Building []<span class="t">string</span>
+}
+
+<span class="k">var</span> me = <span class="t">Engineer</span>{
+    Name:  <span class="s">"Ayaan Shakil"</span>,
+    Role:  <span class="s">"SDE-1 @ Trackier"</span>,
+    Stack: []<span class="t">string</span>{<span class="s">"Go"</span>, <span class="s">"Python"</span>, <span class="s">"Node"</span>},
+    Building: []<span class="t">string</span>{
+        <span class="s">"agents"</span>, <span class="s">"RAG"</span>, <span class="s">"MCP servers"</span>,
+    },
+}
+
+<span class="c">// go run . → shipping since 2024</span><span class="caret"></span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Stats ───────────── -->
+    <section class="wrap" aria-label="Highlights">
+      <div class="stats">
+      <div class="stat reveal"><p class="stat__num" data-count="1000" data-suffix="+">1000+</p><p class="stat__label">users on an LLM assistant I shipped</p></div>
+      <div class="stat reveal"><p class="stat__num" data-count="8">8</p><p class="stat__label">third-party integrations designed for CSNook</p></div>
+      <div class="stat reveal"><p class="stat__num" data-count="56">56</p><p class="stat__label">REST endpoints unblocked via a Node.js proxy</p></div>
+      <div class="stat reveal"><p class="stat__num">4<span class="stat__unit">★</span></p><p class="stat__label">CodeChef · Codeforces Specialist</p></div>
+      </div>
+    </section>
+
+    <!-- ───────────── Experience ───────────── -->
+    <section class="section wrap" id="work">
+      <header class="section__head reveal">
+        <p class="section__num">01</p>
+        <h2>Where I've <em>worked</em></h2>
+        <p class="section__sub">10 months full-time and three internships — from Microsoft to a 0→1 startup launch.</p>
+      </header>
+
+      <ol class="timeline">
+        <li class="job reveal">
+          <div class="job__meta">
+            <p class="job__date">Jan 2026 — Present</p>
+            <p class="job__loc">Remote · Delhi</p>
+          </div>
+          <div class="job__body">
+            <h3>Software Development Engineer 1 <span>@ Trackier</span></h3>
+            <ul>
+              <li>Built a <strong>multi-cloud Data Locker</strong> (AWS S3, GCP, Azure) and the <strong>email management system</strong> for the AppTrove affiliate-marketing SaaS, ingesting campaign performance data for client and internal reporting — used by <strong>100+ external developers</strong>.</li>
+              <li>Built <a href="#csnook">CSNook</a> from <strong>0 → 1</strong>, a Vitally-style customer success platform, owning Health Scores, Segments, Surveys, Custom Fields and a unified Template system.</li>
+              <li>Fixed broken endpoints and CORS issues in the AppTrove Docs API layer with a custom <strong>Node.js proxy</strong>, extending support to <strong>56 REST endpoints</strong>; set up <strong>Jenkins CI</strong> for staging and testing.</li>
+            </ul>
+            <ul class="tags"><li>Go</li><li>Node.js</li><li>AWS S3</li><li>GCP</li><li>Azure</li><li>Jenkins</li></ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job__meta">
+            <p class="job__date">Aug 2025 — Dec 2025</p>
+            <p class="job__loc">Bangalore</p>
+          </div>
+          <div class="job__body">
+            <h3>Software Engineer Intern <span>@ StockSensei</span></h3>
+            <ul>
+              <li>Led full-stack development of <strong>stocksensei.in</strong> from zero to launch, serving <strong>500+ users on day one</strong>.</li>
+              <li>Designed Python/FastAPI REST APIs on PostgreSQL and built 4 product pages in React + TypeScript.</li>
+            </ul>
+            <ul class="tags"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>React</li><li>TypeScript</li></ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job__meta">
+            <p class="job__date">Feb 2025 — Jul 2025</p>
+            <p class="job__loc">Bangalore</p>
+          </div>
+          <div class="job__body">
+            <h3>Product Engineer Intern <span>@ EdgeVerve (Infosys)</span></h3>
+            <ul>
+              <li>Developed <strong>Finacle Treasury</strong> backend modules in C++, improving financial processing performance by <strong>20%</strong>.</li>
+              <li>Cut build times by <strong>~30%</strong> with CMake tooling and authored an adoption report the team accepted.</li>
+            </ul>
+            <ul class="tags"><li>C++</li><li>CMake</li><li>Fintech</li></ul>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job__meta">
+            <p class="job__date">May 2024 — Jun 2024</p>
+            <p class="job__loc">Hyderabad</p>
+          </div>
+          <div class="job__body">
+            <h3>Software Development Engineer Intern <span>@ Microsoft</span></h3>
+            <ul>
+              <li>Built a <strong>GenAI copilot</strong> (LLM + RAG, Copilot Studio) answering Fluent Design Language queries at <strong>90% accuracy</strong>, deployed to <strong>1,000+ users</strong> across internal Teams and Slack.</li>
+              <li>Contributed to Fluent UI V2 components and APIs for Android in Kotlin, used across Microsoft 365 apps.</li>
+            </ul>
+            <ul class="tags"><li>RAG</li><li>Copilot Studio</li><li>Kotlin</li><li>Android</li></ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ───────────── CSNook feature ───────────── -->
+    <section class="section wrap" id="csnook">
+      <header class="section__head reveal">
+        <p class="section__num">02</p>
+        <h2>Spotlight: <em>CSNook</em></h2>
+        <p class="section__sub">A customer success platform I built from an empty repo at Trackier.</p>
+      </header>
+
+      <div class="feature reveal">
+        <div class="feature__copy">
+          <p class="feature__kicker">0 → 1 · Vitally-style CSM platform</p>
+          <p class="feature__text">
+            CSNook gives customer success teams one place to see account health, segment customers,
+            run surveys and automate outreach. I owned the core modules end to end and designed the
+            backend integration layer that pulls conversations, deals, tickets and meetings from the
+            tools CS teams already live in.
+          </p>
+          <div class="modules">
+            <p class="modules__label">Modules I owned</p>
+            <ul>
+              <li><span>01</span>Health Scores</li>
+              <li><span>02</span>Segments</li>
+              <li><span>03</span>Surveys</li>
+              <li><span>04</span>Custom Fields</li>
+              <li><span>05</span>Unified Templates</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hub" aria-label="CSNook connects to 8 third-party platforms">
+          <div class="hub__core">CSNook</div>
+          <ul class="hub__ring">
+            <li style="--i:0">Gmail</li>
+            <li style="--i:1">Slack</li>
+            <li style="--i:2">HubSpot</li>
+            <li style="--i:3">Salesforce</li>
+            <li style="--i:4">Jira</li>
+            <li style="--i:5">Fireflies</li>
+            <li style="--i:6">WhatsApp</li>
+            <li style="--i:7">Periskope</li>
+          </ul>
+          <svg class="hub__lines" viewBox="0 0 400 400" aria-hidden="true">
+            <circle cx="200" cy="200" r="150" />
+            <circle cx="200" cy="200" r="95" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Projects ───────────── -->
+    <section class="section wrap" id="projects">
+      <header class="section__head reveal">
+        <p class="section__num">03</p>
+        <h2>Things I've <em>built</em></h2>
+        <p class="section__sub">Side projects where I get to go deep on retrieval, concurrency and LLMs.</p>
+      </header>
+
+      <div class="projects">
+        <article class="project project--wide reveal">
+          <div class="project__head">
+            <h3>AskYourBook</h3>
+            <a class="project__link" href="https://github.com/ayanshakil/askyourbook" target="_blank" rel="noopener" aria-label="AskYourBook on GitHub">GitHub ↗</a>
+          </div>
+          <p class="project__desc">
+            A "chat with your PDF" backend in Go. A REST API ingests PDFs, splits them into chunks,
+            generates embeddings <strong>concurrently with goroutines</strong> and indexes them in
+            <strong>Qdrant</strong>. Queries are embedded with the same model, the top-k pages are
+            retrieved by cosine similarity and passed to an LLM for grounded, multi-turn chat.
+          </p>
+
+          <ol class="pipeline" aria-label="RAG pipeline">
+            <li><span class="pipeline__n">PDF</span><span>Ingest via REST</span></li>
+            <li><span class="pipeline__n">Chunk</span><span>Split text</span></li>
+            <li class="is-hot"><span class="pipeline__n">Embed</span><span>Fan-out goroutines</span></li>
+            <li><span class="pipeline__n">Qdrant</span><span>Vector index</span></li>
+            <li><span class="pipeline__n">Top-k</span><span>Cosine search</span></li>
+            <li><span class="pipeline__n">LLM</span><span>Grounded answer</span></li>
+          </ol>
+
+          <ul class="tags"><li>Go</li><li>LangChainGo</li><li>Qdrant</li><li>OpenAI API</li><li>REST</li></ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__head">
+            <h3>MedHelp</h3>
+          </div>
+          <p class="project__desc">
+            A GenAI healthcare chatbot that combines real-time IoT sensor readings — SpO₂, temperature,
+            BMI — with LLM-driven diagnostics.
+          </p>
+          <p class="project__metric"><span>89%</span> disease prediction accuracy</p>
+          <ul class="tags"><li>TypeScript</li><li>Node.js</li><li>Copilot Studio</li><li>C++</li><li>IoT</li></ul>
+        </article>
+
+        <article class="project reveal">
+          <div class="project__head">
+            <h3>Fluent Design Copilot</h3>
+            <p class="project__org">Microsoft</p>
+          </div>
+          <p class="project__desc">
+            An LLM + RAG assistant that answers designers' and engineers' questions about Microsoft's
+            Fluent Design Language, deployed inside Teams and Slack.
+          </p>
+          <p class="project__metric"><span>90%</span> answer accuracy · 1,000+ users</p>
+          <ul class="tags"><li>LLM</li><li>RAG</li><li>Copilot Studio</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────── Skills ───────────── -->
+    <section class="section wrap" id="skills">
+      <header class="section__head reveal">
+        <p class="section__num">04</p>
+        <h2>The <em>toolbox</em></h2>
+      </header>
+
+      <div class="skills">
+        <div class="skill reveal">
+          <h3>Languages</h3>
+          <ul><li>Go</li><li>C++</li><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>Backend</h3>
+          <ul><li>REST API design</li><li>Microservices</li><li>Kafka</li><li>Node.js</li><li>FastAPI</li></ul>
+        </div>
+        <div class="skill skill--accent reveal">
+          <h3>GenAI &amp; Agents</h3>
+          <ul><li>LangGraph</li><li>LangChain</li><li>MCP</li><li>RAG</li><li>AI Agents</li><li>Prompt Engineering</li><li>LLM Evals</li><li>Qdrant</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>Databases</h3>
+          <ul><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>ClickHouse</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>Cloud &amp; DevOps</h3>
+          <ul><li>AWS</li><li>GCP</li><li>Docker</li><li>Jenkins</li><li>Git</li><li>Linux</li><li>Postman</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>Frontend</h3>
+          <ul><li>React</li><li>Next.js</li><li>Tailwind</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Achievements + Education ───────────── -->
+    <section class="section wrap" id="about">
+      <header class="section__head reveal">
+        <p class="section__num">05</p>
+        <h2>Competitive <em>programming</em> &amp; school</h2>
+      </header>
+
+      <div class="cp">
+        <a class="cp__card reveal" href="https://codeforces.com/profile/mosetupid" target="_blank" rel="noopener">
+          <p class="cp__site">Codeforces</p>
+          <p class="cp__rank">Specialist</p>
+          <p class="cp__note">View profile ↗</p>
+        </a>
+        <a class="cp__card reveal" href="https://www.codechef.com/users/ayaan17" target="_blank" rel="noopener">
+          <p class="cp__site">CodeChef</p>
+          <p class="cp__rank">4★ · 1847</p>
+          <p class="cp__note">Max rating · View profile ↗</p>
+        </a>
+        <div class="cp__card reveal">
+          <p class="cp__site">ICPC India Prelims 2024</p>
+          <p class="cp__rank">#612</p>
+          <p class="cp__note">out of 3,000+ teams</p>
+        </div>
+        <div class="cp__card cp__card--edu reveal">
+          <p class="cp__site">Education · 2021 — 2025</p>
+          <p class="cp__rank cp__rank--sm">Dayananda Sagar College of Engineering</p>
+          <p class="cp__note">B.E. Electronics &amp; Communication · Bangalore</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Contact ───────────── -->
+    <section class="contact wrap" id="contact">
+      <p class="eyebrow reveal"><span class="dot"></span> Currently based in Bangalore</p>
+      <h2 class="contact__title reveal">Let's build something<br /><em>worth shipping.</em></h2>
+      <p class="contact__sub reveal">Backend systems, AI agents, or a hard algorithmic problem — my inbox is open.</p>
+      <div class="contact__row reveal">
+        <a class="contact__email" href="mailto:ayanshakil17@gmail.com">ayanshakil17@gmail.com</a>
+        <button class="btn btn--sm" id="copyEmail" data-email="ayanshakil17@gmail.com">Copy</button>
+      </div>
+      <a class="contact__phone reveal" href="tel:+917909010610">+91 79090 10610</a>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>© <span id="year">2026</span> Ayaan Shakil</p>
+    <p class="footer__mono">Hand-built with HTML, CSS &amp; a little JS.</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
